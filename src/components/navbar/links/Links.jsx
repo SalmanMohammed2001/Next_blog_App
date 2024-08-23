@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import React from 'react'
+import NavLink from './navLink/navLink'
 
 const Links = () => {
 
@@ -27,10 +28,10 @@ const Links = () => {
 
   return (
 
-    <div>
+    <div className={'flex items-center gap-[30px]'}>
           {
-    link.map((link)=>{
-        return <Link href={link.path}>{link.title}</Link>
+       link.map((link)=>{
+        return <NavLink item={link} />
     })
   }
     </div>
